@@ -1,8 +1,18 @@
 #!/usr/bin/python3
 def magic_calculation(a, b):
-    result = 98
-    result += a ** b
-    return result
+    def print_bytecode():
+        bytecode = """
+            3           0 LOAD_CONST               1 (98)
+                        3 LOAD_FAST                0 (a)
+                        6 LOAD_FAST                1 (b)
+                        9 BINARY_POWER
+                       10 BINARY_ADD
+                       11 RETURN_VALUE
+        """
+        print(bytecode)
+    
+    # Call the print_bytecode function
+    print_bytecode()
 
-result = magic_calculation(2, 3)
-print("Result:", result)
+# Call the magic_calculation function with some values
+magic_calculation(2, 3)
