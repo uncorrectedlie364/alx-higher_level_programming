@@ -1,18 +1,14 @@
-#!/usr/bin/python3
-def magic_calculation(a, b):
-    def print_bytecode():
-        bytecode = """
-            3           0 LOAD_CONST               1 (98)
-                        3 LOAD_FAST                0 (a)
-                        6 LOAD_FAST                1 (b)
-                        9 BINARY_POWER
-                       10 BINARY_ADD
-                       11 RETURN_VALUE
-        """
-        print(bytecode)
-    
-    # Call the print_bytecode function
-    print_bytecode()
+import dis
 
-# Call the magic_calculation function with some values
-magic_calculation(2, 3)
+def magic_calculation(a, b):
+    # Load the constant 98
+    result = 98
+    
+    # Calculate a ** b
+    result = result + (a ** b)
+    
+    # Return the result
+    return result
+
+# Disassemble the bytecode to verify
+dis.dis(magic_calculation)
