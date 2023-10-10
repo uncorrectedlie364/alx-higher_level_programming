@@ -1,3 +1,4 @@
 #!/usr/bin/python3
-numbers = ", ".join(str(number) for number in range(100))
-print(numbers)
+for number in range(100):
+    print("{}, ".format(number), end="")
+print("99")
