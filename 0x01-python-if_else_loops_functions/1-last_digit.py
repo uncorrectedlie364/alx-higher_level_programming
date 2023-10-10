@@ -13,7 +13,7 @@ last_digit = int(int_str[-1])
 # Display the last digit with the sign
 print("Last digit of", number, "is", int_str[-1], end=" ")
 
-if number < 0:
+if last_digit < 0:
     last_digit *= -1
     print("and is -", last_digit, "and is less than 6 and not 0")
 elif last_digit > 5:
