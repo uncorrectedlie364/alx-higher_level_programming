@@ -1,13 +1,11 @@
 #!/usr/bin/python3
+if __name__ == "__main__":
 
-# Import add and assign it to a different name (e.g., my_add)
-from add_0 import add as my_add
+    """Print the sum of 1 and 2."""
 
-a = 1
-b = 2
+    from add_0 import add
 
-# Calculate the result using the add function
-result = my_add(a, b)
+    a = 1
+    b = 2
 
-# Print the result with string formatting
-print("{} + {} = {}".format(a, b, result))
+    print("{} + {} = {}".format(a, b, add(a, b)))
