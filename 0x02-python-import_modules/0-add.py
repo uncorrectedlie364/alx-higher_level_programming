@@ -1,13 +1,13 @@
 #!/usr/bin/python3
+
+# Import add and assign it to a different name (e.g., my_add)
+from add_0 import add as my_add
+
 a = 1
 b = 2
 
-# Import the add function from add_0.py
-from add_0 import add
-
-if __name__ == "__main__":
 # Calculate the result using the add function
-    result = add(a, b)
+result = my_add(a, b)
 
 # Print the result with string formatting
-    print("{} + {} = {}".format(a, b, result))
+print("{} + {} = {}".format(a, b, result))
