@@ -1,16 +1,11 @@
 #!/usr/bin/python3
 
-import py_compile
-import imp
-
 if __name__ == "__main__":
-    # Compile the module if not already compiled
-    py_compile.compile('hidden_4.py')
+    """Print all names defined by hidden_4 module."""
+    import hidden_4
 
-    # Load the compiled module
-    compiled_module = imp.load_compiled('hidden_4', 'hidden_4.pyc')
+    names = dir(hidden_4)
+    for name in names:
+        if name[:2] != "__":
+            print(name)
 
-    # Get and print the names that don't start with '__'
-    module_names = [name for name in dir(compiled_module) if not name.startswith('__')]
-    for name in sorted(module_names):
-        print(name)
